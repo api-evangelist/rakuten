@@ -1,0 +1,547 @@
+aid: rakuten
+name: Rakuten
+description: |
+  Rakuten Group is a Japan-headquartered internet conglomerate
+  spanning e-commerce (Rakuten Ichiba), fintech (Rakuten Bank,
+  Rakuten Card, Rakuten Securities), digital content (Rakuten
+  Books, Kobo, Viki), travel (Rakuten Travel), telecom (Rakuten
+  Mobile, Rakuten Symphony), and advertising (Rakuten Advertising).
+  Rakuten exposes a long-standing public developer platform —
+  Rakuten Web Services (webservice.rakuten.co.jp) — that offers
+  REST/JSON APIs for searching Ichiba items and genres, books,
+  CDs, DVDs, games, software, magazines, Kobo eBooks, Rakuten
+  Travel hotels (simple, detail, vacant, keyword), Rakuten Recipe,
+  and Rakuten GORA golf courses. All RWS APIs use a Rakuten
+  application ID for authentication and are read-only. Rakuten
+  separately operates merchant-facing RMS (Rakuten Merchant Server)
+  APIs and Rakuten Pay merchant APIs, which are partner-gated.
+type: Index
+position: Provider
+access: Public
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - E-commerce
+  - Travel
+  - Books
+  - Recipes
+  - Golf
+  - Japan
+  - Fintech
+  - Telecom
+  - Rakuten Web Services
+url: https://raw.githubusercontent.com/api-evangelist/rakuten/refs/heads/main/apis.yml
+created: '2026-05-23'
+modified: '2026-05-23'
+specificationVersion: '0.20'
+apis:
+  - aid: rakuten:ichiba-item-search
+    name: Rakuten Ichiba Item Search API
+    description: |
+      Keyword and parameter search across all Rakuten Ichiba
+      marketplace items, returning item titles, prices, images,
+      shop information, and ranking signals.
+    humanURL: https://webservice.rakuten.co.jp/documentation/ichiba-item-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - E-commerce
+      - Items
+      - Search
+      - Ichiba
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/ichiba-item-search
+  - aid: rakuten:ichiba-genre-search
+    name: Rakuten Ichiba Genre Search API
+    description: |
+      Returns the hierarchical genre tree used to categorize items
+      across Rakuten Ichiba, enabling category navigation and
+      browse-based product discovery.
+    humanURL: https://webservice.rakuten.co.jp/documentation/ichiba-genre-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Genres
+      - Categories
+      - Ichiba
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/ichiba-genre-search
+  - aid: rakuten:ichiba-tag-search
+    name: Rakuten Ichiba Tag Search API
+    description: |
+      Returns tags associated with a genre, supporting faceted
+      navigation and refinement of Ichiba item browse.
+    humanURL: https://webservice.rakuten.co.jp/documentation/ichiba-tag-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Tags
+      - Facets
+      - Ichiba
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/ichiba-tag-search
+  - aid: rakuten:ichiba-item-ranking
+    name: Rakuten Ichiba Ranking API
+    description: |
+      Returns top-ranked items across Rakuten Ichiba by genre, age,
+      and gender, used for trend and bestseller displays.
+    humanURL: https://webservice.rakuten.co.jp/documentation/ichiba-item-ranking
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Ranking
+      - Bestsellers
+      - Ichiba
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/ichiba-item-ranking
+  - aid: rakuten:ichiba-product-search
+    name: Rakuten Item Price Navi API
+    description: |
+      Price Navi (Product Search) returns aggregated product
+      records with multi-shop price comparisons, ratings, and
+      review metadata for Ichiba.
+    humanURL: https://webservice.rakuten.co.jp/documentation/ichiba-product-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Products
+      - Price Comparison
+      - Reviews
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/ichiba-product-search
+  - aid: rakuten:books-total-search
+    name: Rakuten Books Total Search API
+    description: |
+      Unified search across all Rakuten Books catalogs (books, CDs,
+      DVDs, games, software, magazines), returning normalized
+      product records and Rakuten Books shop information.
+    humanURL: https://webservice.rakuten.co.jp/documentation/books-total-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Books
+      - Media
+      - Search
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/books-total-search
+  - aid: rakuten:books-book-search
+    name: Rakuten Books Book Search API
+    description: |
+      Search Rakuten Books for Japanese-language and translated
+      books by title, author, ISBN, publisher, and other metadata.
+    humanURL: https://webservice.rakuten.co.jp/documentation/books-book-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Books
+      - Search
+      - ISBN
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/books-book-search
+  - aid: rakuten:books-cd-search
+    name: Rakuten Books CD Search API
+    description: |
+      Search Rakuten Books CD catalog by title, artist, label, and
+      release date.
+    humanURL: https://webservice.rakuten.co.jp/documentation/books-cd-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Music
+      - CDs
+      - Search
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/books-cd-search
+  - aid: rakuten:books-dvd-search
+    name: Rakuten Books DVD / Blu-ray Search API
+    description: |
+      Search Rakuten Books DVD and Blu-ray catalog including
+      movies, TV, anime, and live performances.
+    humanURL: https://webservice.rakuten.co.jp/documentation/books-dvd-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Video
+      - DVD
+      - Blu-ray
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/books-dvd-search
+  - aid: rakuten:books-foreign-search
+    name: Rakuten Books Foreign Book Search API
+    description: |
+      Search Rakuten Books foreign-language books catalog (mostly
+      English-language).
+    humanURL: https://webservice.rakuten.co.jp/documentation/books-foreign-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Books
+      - Foreign
+      - Search
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/books-foreign-search
+  - aid: rakuten:books-magazine-search
+    name: Rakuten Books Magazine Search API
+    description: |
+      Search Rakuten Books magazine catalog by title, publisher,
+      and issue date.
+    humanURL: https://webservice.rakuten.co.jp/documentation/books-magazine-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Magazines
+      - Search
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/books-magazine-search
+  - aid: rakuten:books-game-search
+    name: Rakuten Books Game Search API
+    description: |
+      Search Rakuten Books video game catalog across major consoles
+      and platforms.
+    humanURL: https://webservice.rakuten.co.jp/documentation/books-game-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Games
+      - Consoles
+      - Search
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/books-game-search
+  - aid: rakuten:books-software-search
+    name: Rakuten Books Software Search API
+    description: |
+      Search Rakuten Books PC software catalog.
+    humanURL: https://webservice.rakuten.co.jp/documentation/books-software-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Software
+      - PC
+      - Search
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/books-software-search
+  - aid: rakuten:books-genre-search
+    name: Rakuten Books Genre Search API
+    description: |
+      Returns the genre tree for Rakuten Books, used for browse and
+      navigation across the unified Books catalog.
+    humanURL: https://webservice.rakuten.co.jp/documentation/books-genre-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Genres
+      - Categories
+      - Books
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/books-genre-search
+  - aid: rakuten:kobo-ebook-search
+    name: Rakuten Kobo eBook Search API
+    description: |
+      Search Rakuten Kobo's eBook catalog for digital reading
+      content across Japanese and international titles.
+    humanURL: https://webservice.rakuten.co.jp/documentation/kobo-ebook-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - eBooks
+      - Kobo
+      - Search
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/kobo-ebook-search
+  - aid: rakuten:kobo-genre-search
+    name: Rakuten Kobo Genre Search API
+    description: |
+      Returns the Kobo eBook genre hierarchy for browse and filter.
+    humanURL: https://webservice.rakuten.co.jp/documentation/kobo-genre-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Genres
+      - eBooks
+      - Kobo
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/kobo-genre-search
+  - aid: rakuten:travel-simple-hotel-search
+    name: Rakuten Travel Simple Hotel Search API
+    description: |
+      Lightweight keyword and area search over Rakuten Travel's
+      Japanese hotel inventory, returning hotel name, location,
+      and basic descriptors.
+    humanURL: https://webservice.rakuten.co.jp/documentation/simple-hotel-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Travel
+      - Hotels
+      - Search
+      - Japan
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/simple-hotel-search
+  - aid: rakuten:travel-hotel-detail-search
+    name: Rakuten Travel Hotel Detail Search API
+    description: |
+      Returns full hotel detail records including amenities,
+      addresses, images, and access information for one or more
+      Rakuten Travel hotels by hotel number.
+    humanURL: https://webservice.rakuten.co.jp/documentation/hotel-detail-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Travel
+      - Hotels
+      - Details
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/hotel-detail-search
+  - aid: rakuten:travel-vacant-hotel-search
+    name: Rakuten Travel Vacant Hotel Search API
+    description: |
+      Searches for hotels with vacancy for given check-in and
+      check-out dates, party composition, and budget filters.
+    humanURL: https://webservice.rakuten.co.jp/documentation/vacant-hotel-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Travel
+      - Hotels
+      - Availability
+      - Booking
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/vacant-hotel-search
+  - aid: rakuten:travel-get-area-class
+    name: Rakuten Travel Area Class API
+    description: |
+      Returns Rakuten Travel's hierarchical Japanese area
+      classification (prefecture / region / detail), used to scope
+      hotel searches and build location filters.
+    humanURL: https://webservice.rakuten.co.jp/documentation/get-area-class
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Travel
+      - Areas
+      - Japan
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/get-area-class
+  - aid: rakuten:travel-keyword-hotel-search
+    name: Rakuten Travel Keyword Hotel Search API
+    description: |
+      Full-text keyword search across Rakuten Travel hotel
+      inventory, with filters for area, price, and rating.
+    humanURL: https://webservice.rakuten.co.jp/documentation/keyword-hotel-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Travel
+      - Hotels
+      - Keyword
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/keyword-hotel-search
+  - aid: rakuten:travel-hotel-chain-list
+    name: Rakuten Travel Hotel Chain List API
+    description: |
+      Returns the list of hotel chains available on Rakuten Travel,
+      used to scope searches to a specific brand.
+    humanURL: https://webservice.rakuten.co.jp/documentation/get-hotel-chain-list
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Travel
+      - Chains
+      - Brands
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/get-hotel-chain-list
+  - aid: rakuten:travel-hotel-ranking
+    name: Rakuten Travel Hotel Ranking API
+    description: |
+      Returns top-ranked Rakuten Travel hotels by area and category
+      for trend, bestseller, and recommendation displays.
+    humanURL: https://webservice.rakuten.co.jp/documentation/hotel-ranking
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Travel
+      - Hotels
+      - Ranking
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/hotel-ranking
+  - aid: rakuten:recipe-category-list
+    name: Rakuten Recipe Category List API
+    description: |
+      Returns the Rakuten Recipe category hierarchy (large, medium,
+      small) used for browse navigation of user-submitted Japanese
+      recipes.
+    humanURL: https://webservice.rakuten.co.jp/documentation/recipe-category-list
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Recipes
+      - Categories
+      - Food
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/recipe-category-list
+  - aid: rakuten:recipe-category-ranking
+    name: Rakuten Recipe Category Ranking API
+    description: |
+      Returns top-ranked recipes within a Rakuten Recipe category,
+      with images, ingredients, and recipe URLs.
+    humanURL: https://webservice.rakuten.co.jp/documentation/recipe-category-ranking
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Recipes
+      - Ranking
+      - Food
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/recipe-category-ranking
+  - aid: rakuten:gora-golf-course-search
+    name: Rakuten GORA Golf Course Search API
+    description: |
+      Search Rakuten GORA Japanese golf courses by name, area, and
+      facility attributes.
+    humanURL: https://webservice.rakuten.co.jp/documentation/gora-golf-course-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Golf
+      - GORA
+      - Japan
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/gora-golf-course-search
+  - aid: rakuten:gora-golf-course-detail
+    name: Rakuten GORA Golf Course Detail API
+    description: |
+      Returns full golf course detail records on Rakuten GORA
+      including holes, yardage, fees, access, and amenities.
+    humanURL: https://webservice.rakuten.co.jp/documentation/gora-golf-course-detail
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Golf
+      - GORA
+      - Course Details
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/gora-golf-course-detail
+  - aid: rakuten:gora-plan-search
+    name: Rakuten GORA Golf Plan Search API
+    description: |
+      Search Rakuten GORA tee-time plans by course, date, party
+      size, and budget — used to surface bookable golf rounds.
+    humanURL: https://webservice.rakuten.co.jp/documentation/gora-plan-search
+    baseURL: https://app.rakuten.co.jp
+    tags:
+      - Golf
+      - GORA
+      - Tee Times
+    properties:
+      - type: Documentation
+        url: https://webservice.rakuten.co.jp/documentation/gora-plan-search
+  - aid: rakuten:rakuten-pay
+    name: Rakuten Pay Merchant API
+    description: |
+      Rakuten Pay is Rakuten's e-money / QR payment service for
+      Japan, integrated by merchants directly or via PSPs. The
+      merchant API handles order creation, payment authorization,
+      capture, refunds, and reconciliation for in-store QR and
+      online checkout flows.
+    humanURL: https://pay.rakuten.co.jp/business/
+    baseURL: https://api.rakuten.co.jp
+    tags:
+      - Payments
+      - QR
+      - Japan
+      - Merchant
+    properties:
+      - type: ProductPage
+        url: https://pay.rakuten.co.jp/business/
+  - aid: rakuten:rms
+    name: Rakuten RMS (Merchant Server) API
+    description: |
+      RMS (Rakuten Merchant Server) is the operational API for
+      Rakuten Ichiba sellers, covering item management, order
+      management, shipping, inventory, and customer messaging.
+      Access is restricted to approved Ichiba shop owners and
+      partner ERP / OMS vendors.
+    humanURL: https://webservice.rms.rakuten.co.jp/
+    baseURL: https://api.rms.rakuten.co.jp
+    tags:
+      - Merchant
+      - Ichiba
+      - Orders
+      - Inventory
+      - ERP
+    properties:
+      - type: ProductPage
+        url: https://webservice.rms.rakuten.co.jp/
+features:
+  - name: Rakuten Web Services
+    description: Public RWS APIs cover Ichiba, Books, Travel, Recipe, Kobo, and GORA — all under a single Rakuten application ID.
+  - name: Long-Lived Public API Platform
+    description: RWS has been one of Japan's longest-running public commerce APIs and remains widely used by Japanese developers and academic projects.
+  - name: Japan-Specific Datasets
+    description: Hotel area classifications, Japanese recipe taxonomies, and Japanese golf course databases are unique to Rakuten's ecosystem.
+  - name: Merchant Operations via RMS
+    description: Ichiba sellers and partner OMS / ERP vendors integrate operations through the restricted-access RMS API surface.
+  - name: Rakuten Pay
+    description: QR and online payment acceptance for Japanese merchants through the Rakuten Pay merchant program.
+useCases:
+  - name: Price Comparison
+    description: Build Japanese price-comparison and product-discovery apps on top of Ichiba and Books search APIs.
+  - name: Travel Booking
+    description: Display Rakuten Travel hotel inventory in third-party travel apps and meta-search engines.
+  - name: Recipe Discovery
+    description: Power recipe and cooking apps with Japanese user-submitted Rakuten Recipe data.
+  - name: Golf Reservations
+    description: Surface Rakuten GORA tee-time inventory in sports and lifestyle apps.
+  - name: Marketplace Operations
+    description: Ichiba sellers manage products, orders, and fulfillment via RMS through ERP and OMS partners.
+integrations:
+  - name: Rakuten Ichiba
+  - name: Rakuten Books
+  - name: Rakuten Kobo
+  - name: Rakuten Travel
+  - name: Rakuten Recipe
+  - name: Rakuten GORA
+  - name: Rakuten Pay
+  - name: Rakuten Card
+  - name: Rakuten Mobile
+  - name: Rakuten Advertising
+authentication:
+  - type: APIKey
+    description: Rakuten Web Services authenticate with a free application ID issued from the RWS developer console.
+  - type: OAuth2
+    description: Rakuten Pay and RMS partner integrations use OAuth 2.0 with merchant-issued credentials.
+  - type: AccessToken
+    description: RMS endpoints require a per-shop service-secret access token issued through the Ichiba RMS portal.
+common:
+  - type: CorporateWebsite
+    url: https://global.rakuten.com/corp/
+  - type: ConsumerWebsite
+    url: https://www.rakuten.co.jp/
+  - type: DeveloperPortal
+    url: https://webservice.rakuten.co.jp/
+  - type: Documentation
+    url: https://webservice.rakuten.co.jp/documentation
+  - type: APIList
+    url: https://webservice.rakuten.co.jp/documentation
+  - type: SignUp
+    url: https://webservice.rakuten.co.jp/app/create
+  - type: RMS
+    url: https://webservice.rms.rakuten.co.jp/
+  - type: RakutenPay
+    url: https://pay.rakuten.co.jp/business/
+  - type: InvestorRelations
+    url: https://global.rakuten.com/corp/investors/
+  - type: News
+    url: https://global.rakuten.com/corp/news/
+  - type: Sustainability
+    url: https://global.rakuten.com/corp/sustainability/
+  - type: Careers
+    url: https://global.rakuten.com/corp/careers/
+  - type: GitHub
+    url: https://github.com/rakutentech
+  - type: TechBlog
+    url: https://engineering.rakuten.today/
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/rakuten/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
