@@ -1,0 +1,232 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Rakuten Web Services API",
+    "version": "20260401"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "applicationId",
+      "value": "{{applicationId}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search Ichiba items",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.rakuten.co.jp/ichibams/api/IchibaItem/Search/20260401",
+        "params": [
+          {
+            "name": "applicationId",
+            "value": "",
+            "type": "query",
+            "description": "Rakuten application ID."
+          },
+          {
+            "name": "accessKey",
+            "value": "",
+            "type": "query",
+            "description": "Rakuten access key (may be sent as a header instead)."
+          },
+          {
+            "name": "keyword",
+            "value": "",
+            "type": "query",
+            "description": "UTF-8 URL-encoded search keyword, max 128 bytes, minimum 2 characters."
+          },
+          {
+            "name": "shopCode",
+            "value": "",
+            "type": "query",
+            "description": "Shop identifier from URL."
+          },
+          {
+            "name": "itemCode",
+            "value": "",
+            "type": "query",
+            "description": "Item code in the format \"shop:1234\"."
+          },
+          {
+            "name": "genreId",
+            "value": "",
+            "type": "query",
+            "description": "Numeric Ichiba genre identifier."
+          },
+          {
+            "name": "hits",
+            "value": "",
+            "type": "query",
+            "description": "Number of results per page (1-30)."
+          },
+          {
+            "name": "page",
+            "value": "",
+            "type": "query",
+            "description": "Page number (1-100)."
+          },
+          {
+            "name": "sort",
+            "value": "",
+            "type": "query",
+            "description": "Sort order (e.g. \"+itemPrice\", \"-reviewAverage\")."
+          },
+          {
+            "name": "minPrice",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "maxPrice",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "format",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "callback",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "elements",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "formatVersion",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Keyword and parameter search across all Rakuten Ichiba items.\nAt least one of keyword, shopCode, itemCode, or genreId is required.\n"
+    },
+    {
+      "info": {
+        "name": "Get Ichiba genre tree",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.rakuten.co.jp/ichibagt/api/IchibaGenre/Search/20260401",
+        "params": [
+          {
+            "name": "applicationId",
+            "value": "",
+            "type": "query",
+            "description": "Rakuten application ID."
+          },
+          {
+            "name": "accessKey",
+            "value": "",
+            "type": "query",
+            "description": "Rakuten access key (may be sent as a header instead)."
+          },
+          {
+            "name": "genreId",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "affiliateId",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "format",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "callback",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "elements",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "formatVersion",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Returns ancestors, current genre, siblings, children, and attributes\nfor a given genre. Use genreId=0 for the root.\n"
+    },
+    {
+      "info": {
+        "name": "Get Ichiba item ranking",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.rakuten.co.jp/ichibaranking/api/IchibaItem/Ranking/20220601",
+        "params": [
+          {
+            "name": "applicationId",
+            "value": "",
+            "type": "query",
+            "description": "Rakuten application ID."
+          },
+          {
+            "name": "accessKey",
+            "value": "",
+            "type": "query",
+            "description": "Rakuten access key (may be sent as a header instead)."
+          },
+          {
+            "name": "genreId",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "age",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "sex",
+            "value": "",
+            "type": "query",
+            "description": "0=Male, 1=Female."
+          },
+          {
+            "name": "page",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "carrier",
+            "value": "",
+            "type": "query",
+            "description": "0=PC, 1=Mobile."
+          },
+          {
+            "name": "format",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "callback",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Returns top-ranked Ichiba items by genre, age, gender, carrier."
+    }
+  ],
+  "bundled": true
+}
