@@ -512,7 +512,7 @@ authentication:
   - type: AccessToken
     description: RMS endpoints require a per-shop service-secret access token issued through the Ichiba RMS portal.
 common:
-  - type: CorporateWebsite
+  - type: Website
     url: https://global.rakuten.com/corp/
   - type: ConsumerWebsite
     url: https://www.rakuten.co.jp/
@@ -522,7 +522,7 @@ common:
     url: https://webservice.rakuten.co.jp/documentation
   - type: APIList
     url: https://webservice.rakuten.co.jp/documentation
-  - type: SignUp
+  - type: Signup
     url: https://webservice.rakuten.co.jp/app/create
   - type: RMS
     url: https://webservice.rms.rakuten.co.jp/
