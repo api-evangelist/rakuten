@@ -1,0 +1,23 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/rakuten-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - query
+schemes:
+- name: applicationId
+  type: apiKey
+  in: query
+  parameter: applicationId
+  description: Rakuten application ID (issued from the RWS developer console).
+  sources:
+  - openapi/rakuten-openapi.yml
+- name: accessKey
+  type: apiKey
+  in: query
+  parameter: accessKey
+  description: Rakuten RWS access key. May also be supplied as an HTTP header.
+  sources:
+  - openapi/rakuten-openapi.yml

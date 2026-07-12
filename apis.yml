@@ -512,6 +512,10 @@ authentication:
   - type: AccessToken
     description: RMS endpoints require a per-shop service-secret access token issued through the Ichiba RMS portal.
 common:
+  - type: DomainSecurity
+    url: security/rakuten-domain-security.yml
+  - type: Authentication
+    url: authentication/rakuten-authentication.yml
   - type: Website
     url: https://global.rakuten.com/corp/
   - type: ConsumerWebsite
