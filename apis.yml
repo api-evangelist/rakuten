@@ -512,6 +512,8 @@ authentication:
   - type: AccessToken
     description: RMS endpoints require a per-shop service-secret access token issued through the Ichiba RMS portal.
 common:
+  - type: AgenticAccess
+    url: agentic-access/rakuten-agentic-access.yml
   - type: DomainSecurity
     url: security/rakuten-domain-security.yml
   - type: Authentication
