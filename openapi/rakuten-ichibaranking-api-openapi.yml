@@ -1,0 +1,167 @@
+openapi: 3.1.0
+info:
+  title: Rakuten Web Services Ichibagt Ichibaranking API
+  description: 'Public Rakuten Web Services (RWS) REST/JSON APIs for searching the Rakuten
+
+    Ichiba marketplace (item search, genre search, item ranking). All endpoints
+
+    require a Rakuten application ID and access key.
+
+    '
+  version: '20260401'
+  contact:
+    name: Rakuten Web Services
+    url: https://webservice.rakuten.co.jp/
+servers:
+- url: https://app.rakuten.co.jp
+  description: Public Rakuten Web Services base host
+- url: https://openapi.rakuten.co.jp
+  description: Rakuten OpenAPI host (used by current RWS endpoints)
+security:
+- applicationId: []
+  accessKey: []
+tags:
+- name: Ichibaranking
+paths:
+  /ichibaranking/api/IchibaItem/Ranking/20220601:
+    get:
+      summary: Get Ichiba item ranking
+      description: Returns top-ranked Ichiba items by genre, age, gender, carrier.
+      operationId: getIchibaItemRanking
+      servers:
+      - url: https://openapi.rakuten.co.jp
+      parameters:
+      - $ref: '#/components/parameters/applicationId'
+      - $ref: '#/components/parameters/accessKey'
+      - name: genreId
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: age
+        in: query
+        schema:
+          type: integer
+          enum:
+          - 10
+          - 20
+          - 30
+          - 40
+          - 50
+      - name: sex
+        in: query
+        description: 0=Male, 1=Female.
+        schema:
+          type: integer
+          enum:
+          - 0
+          - 1
+      - name: page
+        in: query
+        schema:
+          type: integer
+          minimum: 1
+          maximum: 34
+      - name: carrier
+        in: query
+        description: 0=PC, 1=Mobile.
+        schema:
+          type: integer
+          enum:
+          - 0
+          - 1
+      - name: format
+        in: query
+        schema:
+          type: string
+          enum:
+          - json
+          - xml
+          default: json
+      - name: callback
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Ranking response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IchibaItemRankingResponse'
+      tags:
+      - Ichibaranking
+components:
+  schemas:
+    RankedItem:
+      type: object
+      properties:
+        rank:
+          type: integer
+        itemName:
+          type: string
+        itemPrice:
+          type: integer
+        itemUrl:
+          type: string
+        affiliateUrl:
+          type: string
+        mediumImageUrls:
+          type: array
+          items:
+            type: string
+        shopName:
+          type: string
+        shopCode:
+          type: string
+        shopUrl:
+          type: string
+        reviewCount:
+          type: integer
+        reviewAverage:
+          type: number
+        availability:
+          type: integer
+        taxFlag:
+          type: integer
+        postageFlag:
+          type: integer
+        creditCardFlag:
+          type: integer
+    IchibaItemRankingResponse:
+      type: object
+      properties:
+        title:
+          type: string
+        lastBuildDate:
+          type: string
+        Items:
+          type: array
+          items:
+            $ref: '#/components/schemas/RankedItem'
+  parameters:
+    accessKey:
+      name: accessKey
+      in: query
+      required: true
+      description: Rakuten access key (may be sent as a header instead).
+      schema:
+        type: string
+    applicationId:
+      name: applicationId
+      in: query
+      required: true
+      description: Rakuten application ID.
+      schema:
+        type: string
+  securitySchemes:
+    applicationId:
+      type: apiKey
+      in: query
+      name: applicationId
+      description: Rakuten application ID (issued from the RWS developer console).
+    accessKey:
+      type: apiKey
+      in: query
+      name: accessKey
+      description: Rakuten RWS access key. May also be supplied as an HTTP header.

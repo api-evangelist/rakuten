@@ -1,0 +1,135 @@
+openapi: 3.1.0
+info:
+  title: Rakuten Web Services Ichibagt API
+  description: 'Public Rakuten Web Services (RWS) REST/JSON APIs for searching the Rakuten
+
+    Ichiba marketplace (item search, genre search, item ranking). All endpoints
+
+    require a Rakuten application ID and access key.
+
+    '
+  version: '20260401'
+  contact:
+    name: Rakuten Web Services
+    url: https://webservice.rakuten.co.jp/
+servers:
+- url: https://app.rakuten.co.jp
+  description: Public Rakuten Web Services base host
+- url: https://openapi.rakuten.co.jp
+  description: Rakuten OpenAPI host (used by current RWS endpoints)
+security:
+- applicationId: []
+  accessKey: []
+tags:
+- name: Ichibagt
+paths:
+  /ichibagt/api/IchibaGenre/Search/20260401:
+    get:
+      summary: Get Ichiba genre tree
+      description: 'Returns ancestors, current genre, siblings, children, and attributes
+
+        for a given genre. Use genreId=0 for the root.
+
+        '
+      operationId: searchIchibaGenre
+      servers:
+      - url: https://openapi.rakuten.co.jp
+      parameters:
+      - $ref: '#/components/parameters/applicationId'
+      - $ref: '#/components/parameters/accessKey'
+      - name: genreId
+        in: query
+        required: true
+        schema:
+          type: string
+      - name: affiliateId
+        in: query
+        schema:
+          type: string
+      - name: format
+        in: query
+        schema:
+          type: string
+          enum:
+          - json
+          - xml
+          default: json
+      - name: callback
+        in: query
+        schema:
+          type: string
+      - name: elements
+        in: query
+        schema:
+          type: string
+      - name: formatVersion
+        in: query
+        schema:
+          type: integer
+          enum:
+          - 1
+          - 2
+      responses:
+        '200':
+          description: Genre tree response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IchibaGenreSearchResponse'
+      tags:
+      - Ichibagt
+components:
+  schemas:
+    IchibaGenreSearchResponse:
+      type: object
+      properties:
+        ancestors:
+          type: array
+          items:
+            $ref: '#/components/schemas/Genre'
+        current:
+          $ref: '#/components/schemas/Genre'
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/Genre'
+        siblings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Genre'
+    Genre:
+      type: object
+      properties:
+        genreId:
+          type: integer
+          format: int64
+        genreName:
+          type: string
+        genreLevel:
+          type: integer
+  parameters:
+    accessKey:
+      name: accessKey
+      in: query
+      required: true
+      description: Rakuten access key (may be sent as a header instead).
+      schema:
+        type: string
+    applicationId:
+      name: applicationId
+      in: query
+      required: true
+      description: Rakuten application ID.
+      schema:
+        type: string
+  securitySchemes:
+    applicationId:
+      type: apiKey
+      in: query
+      name: applicationId
+      description: Rakuten application ID (issued from the RWS developer console).
+    accessKey:
+      type: apiKey
+      in: query
+      name: accessKey
+      description: Rakuten RWS access key. May also be supplied as an HTTP header.
