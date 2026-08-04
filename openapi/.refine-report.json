@@ -1,0 +1,18 @@
+{
+  "provider": "rakuten",
+  "sources": [
+    "rakuten-ichibagt-api-openapi.yml",
+    "rakuten-ichibams-api-openapi.yml",
+    "rakuten-ichibaranking-api-openapi.yml"
+  ],
+  "outputs": [
+    "rakuten-ichibagt-api-openapi.yml",
+    "rakuten-ichibams-api-openapi.yml",
+    "rakuten-ichibaranking-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
