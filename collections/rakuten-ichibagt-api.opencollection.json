@@ -1,0 +1,81 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Rakuten Web Services Ichibagt API",
+    "version": "20260401"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "applicationId",
+      "value": "{{applicationId}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Ichibagt",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Ichiba genre tree",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.rakuten.co.jp/ichibagt/api/IchibaGenre/Search/20260401",
+            "params": [
+              {
+                "name": "applicationId",
+                "value": "",
+                "type": "query",
+                "description": "Rakuten application ID."
+              },
+              {
+                "name": "accessKey",
+                "value": "",
+                "type": "query",
+                "description": "Rakuten access key (may be sent as a header instead)."
+              },
+              {
+                "name": "genreId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "affiliateId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "callback",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "elements",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "formatVersion",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns ancestors, current genre, siblings, children, and attributes\nfor a given genre. Use genreId=0 for the root.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

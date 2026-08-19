@@ -1,0 +1,285 @@
+{
+  "item": [
+    {
+      "id": "7387e924-db93-452d-9c54-8a5dd6c2440a",
+      "name": "Ichibams",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f70b4e41-5c9f-468d-8c07-7d7080967ed2",
+          "name": "Search Ichiba items",
+          "request": {
+            "name": "Search Ichiba items",
+            "description": {
+              "content": "Keyword and parameter search across all Rakuten Ichiba items.\nAt least one of keyword, shopCode, itemCode, or genreId is required.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "protocol": "https",
+              "path": [
+                "ichibams",
+                "api",
+                "IchibaItem",
+                "Search",
+                "20260401"
+              ],
+              "host": [
+                "openapi",
+                "rakuten",
+                "co",
+                "jp"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "applicationId",
+                  "value": "<string>",
+                  "description": "(Required) Rakuten application ID."
+                },
+                {
+                  "disabled": false,
+                  "key": "accessKey",
+                  "value": "<string>",
+                  "description": "(Required) Rakuten access key (may be sent as a header instead)."
+                },
+                {
+                  "disabled": false,
+                  "key": "keyword",
+                  "value": "<string>",
+                  "description": "UTF-8 URL-encoded search keyword, max 128 bytes, minimum 2 characters."
+                },
+                {
+                  "disabled": false,
+                  "key": "shopCode",
+                  "value": "<string>",
+                  "description": "Shop identifier from URL."
+                },
+                {
+                  "disabled": false,
+                  "key": "itemCode",
+                  "value": "<string>",
+                  "description": "Item code in the format \"shop:1234\"."
+                },
+                {
+                  "disabled": false,
+                  "key": "genreId",
+                  "value": "<long>",
+                  "description": "Numeric Ichiba genre identifier."
+                },
+                {
+                  "disabled": false,
+                  "key": "hits",
+                  "value": "30",
+                  "description": "Number of results per page (1-30)."
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "1",
+                  "description": "Page number (1-100)."
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>",
+                  "description": "Sort order (e.g. \"+itemPrice\", \"-reviewAverage\")."
+                },
+                {
+                  "disabled": false,
+                  "key": "minPrice",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "maxPrice",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "json"
+                },
+                {
+                  "disabled": false,
+                  "key": "callback",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "elements",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "formatVersion",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0b47a6d7-f46f-41ee-94ee-eeb1fe597cfb",
+              "name": "Search results.",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "ichibams",
+                    "api",
+                    "IchibaItem",
+                    "Search",
+                    "20260401"
+                  ],
+                  "host": [
+                    "openapi",
+                    "rakuten",
+                    "co",
+                    "jp"
+                  ],
+                  "query": [
+                    {
+                      "key": "applicationId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "accessKey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "keyword",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "shopCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "itemCode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "genreId",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "hits",
+                      "value": "30"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "minPrice",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "json"
+                    },
+                    {
+                      "key": "callback",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "elements",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "formatVersion",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "applicationId",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 8211,\n  \"page\": 5032,\n  \"first\": 4767,\n  \"last\": 9130,\n  \"hits\": 3469,\n  \"pageCount\": 9141,\n  \"Items\": [\n    {\n      \"itemName\": \"string\",\n      \"itemCode\": \"string\",\n      \"itemPrice\": 533,\n      \"itemUrl\": \"string\",\n      \"affiliateUrl\": \"string\",\n      \"shopName\": \"string\",\n      \"shopCode\": \"string\",\n      \"reviewCount\": 7878,\n      \"reviewAverage\": 7644.96643051532,\n      \"availability\": 8644,\n      \"smallImageUrls\": [\n        \"string\",\n        \"string\"\n      ],\n      \"mediumImageUrls\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"itemName\": \"string\",\n      \"itemCode\": \"string\",\n      \"itemPrice\": 7120,\n      \"itemUrl\": \"string\",\n      \"affiliateUrl\": \"string\",\n      \"shopName\": \"string\",\n      \"shopCode\": \"string\",\n      \"reviewCount\": 7860,\n      \"reviewAverage\": 8095.048179360976,\n      \"availability\": 3165,\n      \"smallImageUrls\": [\n        \"string\",\n        \"string\"\n      ],\n      \"mediumImageUrls\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.rakuten.co.jp",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "applicationId"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a352426d-1d03-470b-ab54-10a027996039",
+    "name": "Rakuten Web Services Ichibagt Ichibams API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public Rakuten Web Services (RWS) REST/JSON APIs for searching the Rakuten\nIchiba marketplace (item search, genre search, item ranking). All endpoints\nrequire a Rakuten application ID and access key.\n\n\nContact Support:\n Name: Rakuten Web Services",
+      "type": "text/plain"
+    }
+  }
+}

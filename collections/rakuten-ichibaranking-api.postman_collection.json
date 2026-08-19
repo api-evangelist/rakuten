@@ -1,0 +1,226 @@
+{
+  "item": [
+    {
+      "id": "54b366a8-41ae-4aa9-8386-db5c2ded15c3",
+      "name": "Ichibaranking",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "415a958d-e178-42c8-91aa-9f5668c9b124",
+          "name": "Get Ichiba item ranking",
+          "request": {
+            "name": "Get Ichiba item ranking",
+            "description": {
+              "content": "Returns top-ranked Ichiba items by genre, age, gender, carrier.",
+              "type": "text/plain"
+            },
+            "url": {
+              "protocol": "https",
+              "path": [
+                "ichibaranking",
+                "api",
+                "IchibaItem",
+                "Ranking",
+                "20220601"
+              ],
+              "host": [
+                "openapi",
+                "rakuten",
+                "co",
+                "jp"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "applicationId",
+                  "value": "<string>",
+                  "description": "(Required) Rakuten application ID."
+                },
+                {
+                  "disabled": false,
+                  "key": "accessKey",
+                  "value": "<string>",
+                  "description": "(Required) Rakuten access key (may be sent as a header instead)."
+                },
+                {
+                  "disabled": false,
+                  "key": "genreId",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "age",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sex",
+                  "value": "<integer>",
+                  "description": "0=Male, 1=Female."
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "carrier",
+                  "value": "<integer>",
+                  "description": "0=PC, 1=Mobile."
+                },
+                {
+                  "disabled": false,
+                  "key": "format",
+                  "value": "json"
+                },
+                {
+                  "disabled": false,
+                  "key": "callback",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a626008d-a9fc-4107-9d73-2ef1c68adb8a",
+              "name": "Ranking response.",
+              "originalRequest": {
+                "url": {
+                  "protocol": "https",
+                  "path": [
+                    "ichibaranking",
+                    "api",
+                    "IchibaItem",
+                    "Ranking",
+                    "20220601"
+                  ],
+                  "host": [
+                    "openapi",
+                    "rakuten",
+                    "co",
+                    "jp"
+                  ],
+                  "query": [
+                    {
+                      "key": "applicationId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "accessKey",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "genreId",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "age",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "sex",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "carrier",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "format",
+                      "value": "json"
+                    },
+                    {
+                      "key": "callback",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "applicationId",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"title\": \"string\",\n  \"lastBuildDate\": \"string\",\n  \"Items\": [\n    {\n      \"rank\": 2881,\n      \"itemName\": \"string\",\n      \"itemPrice\": 9574,\n      \"itemUrl\": \"string\",\n      \"affiliateUrl\": \"string\",\n      \"mediumImageUrls\": [\n        \"string\",\n        \"string\"\n      ],\n      \"shopName\": \"string\",\n      \"shopCode\": \"string\",\n      \"shopUrl\": \"string\",\n      \"reviewCount\": 7116,\n      \"reviewAverage\": 7219.401515840006,\n      \"availability\": 3078,\n      \"taxFlag\": 7451,\n      \"postageFlag\": 9608,\n      \"creditCardFlag\": 1937\n    },\n    {\n      \"rank\": 2995,\n      \"itemName\": \"string\",\n      \"itemPrice\": 9990,\n      \"itemUrl\": \"string\",\n      \"affiliateUrl\": \"string\",\n      \"mediumImageUrls\": [\n        \"string\",\n        \"string\"\n      ],\n      \"shopName\": \"string\",\n      \"shopCode\": \"string\",\n      \"shopUrl\": \"string\",\n      \"reviewCount\": 9417,\n      \"reviewAverage\": 8704.108427751464,\n      \"availability\": 6671,\n      \"taxFlag\": 8806,\n      \"postageFlag\": 2110,\n      \"creditCardFlag\": 5625\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.rakuten.co.jp",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "applicationId"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1c487164-efb6-4155-a8ce-7f21b2d79010",
+    "name": "Rakuten Web Services Ichibagt Ichibaranking API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public Rakuten Web Services (RWS) REST/JSON APIs for searching the Rakuten\nIchiba marketplace (item search, genre search, item ranking). All endpoints\nrequire a Rakuten application ID and access key.\n\n\nContact Support:\n Name: Rakuten Web Services",
+      "type": "text/plain"
+    }
+  }
+}

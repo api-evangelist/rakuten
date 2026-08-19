@@ -1,0 +1,88 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Rakuten Web Services Ichibagt Ichibaranking API",
+    "version": "20260401"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "applicationId",
+      "value": "{{applicationId}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Ichibaranking",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Ichiba item ranking",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.rakuten.co.jp/ichibaranking/api/IchibaItem/Ranking/20220601",
+            "params": [
+              {
+                "name": "applicationId",
+                "value": "",
+                "type": "query",
+                "description": "Rakuten application ID."
+              },
+              {
+                "name": "accessKey",
+                "value": "",
+                "type": "query",
+                "description": "Rakuten access key (may be sent as a header instead)."
+              },
+              {
+                "name": "genreId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "age",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sex",
+                "value": "",
+                "type": "query",
+                "description": "0=Male, 1=Female."
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "carrier",
+                "value": "",
+                "type": "query",
+                "description": "0=PC, 1=Mobile."
+              },
+              {
+                "name": "format",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "callback",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Returns top-ranked Ichiba items by genre, age, gender, carrier."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
