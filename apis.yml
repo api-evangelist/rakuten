@@ -45,7 +45,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/rakuten/refs/heads/main/apis.yml
 created: '2026-05-23'
 modified: '2026-05-23'
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 apis:
 - aid: rakuten:ichiba-item-search
   name: Rakuten Ichiba Item Search API
