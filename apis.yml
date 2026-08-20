@@ -33,6 +33,16 @@ position: Provider
 access: Public
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rakuten.png
 tags:
+  - E-Commerce
+  - Travel
+  - Books
+  - Recipes
+  - Golf
+  - Japan
+  - Fintech
+  - Telecom
+  - Rakuten Web Services
+tags_raw:
   - E-commerce
   - Travel
   - Books
@@ -58,6 +68,11 @@ apis:
   humanURL: https://webservice.rakuten.co.jp/documentation/ichiba-item-search
   baseURL: https://app.rakuten.co.jp
   tags:
+  - E-Commerce
+  - Item
+  - Search
+  - Ichiba
+  tags_raw:
   - E-commerce
   - Items
   - Search
@@ -123,6 +138,10 @@ apis:
   humanURL: https://webservice.rakuten.co.jp/documentation/ichiba-product-search
   baseURL: https://app.rakuten.co.jp
   tags:
+  - Product
+  - Price Comparison
+  - Reviews
+  tags_raw:
   - Products
   - Price Comparison
   - Reviews
@@ -170,6 +189,10 @@ apis:
   humanURL: https://webservice.rakuten.co.jp/documentation/books-cd-search
   baseURL: https://app.rakuten.co.jp
   tags:
+  - Music
+  - CDS
+  - Search
+  tags_raw:
   - Music
   - CDs
   - Search
@@ -272,6 +295,10 @@ apis:
   humanURL: https://webservice.rakuten.co.jp/documentation/kobo-ebook-search
   baseURL: https://app.rakuten.co.jp
   tags:
+  - Ebooks
+  - Kobo
+  - Search
+  tags_raw:
   - eBooks
   - Kobo
   - Search
@@ -285,6 +312,10 @@ apis:
   humanURL: https://webservice.rakuten.co.jp/documentation/kobo-genre-search
   baseURL: https://app.rakuten.co.jp
   tags:
+  - Genres
+  - Ebooks
+  - Kobo
+  tags_raw:
   - Genres
   - eBooks
   - Kobo
@@ -518,6 +549,12 @@ apis:
   humanURL: https://webservice.rms.rakuten.co.jp/
   baseURL: https://api.rms.rakuten.co.jp
   tags:
+  - Merchant
+  - Ichiba
+  - Order
+  - Inventory
+  - ERP
+  tags_raw:
   - Merchant
   - Ichiba
   - Orders
