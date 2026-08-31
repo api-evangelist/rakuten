@@ -202,7 +202,7 @@ apis:
   baseURL: https://app.rakuten.co.jp
   tags:
   - Music
-  - CDS
+  - CDs
   - Search
   tags_raw:
   - Music
@@ -307,7 +307,7 @@ apis:
   humanURL: https://webservice.rakuten.co.jp/documentation/kobo-ebook-search
   baseURL: https://app.rakuten.co.jp
   tags:
-  - Ebooks
+  - eBooks
   - Kobo
   - Search
   tags_raw:
@@ -325,7 +325,7 @@ apis:
   baseURL: https://app.rakuten.co.jp
   tags:
   - Genres
-  - Ebooks
+  - eBooks
   - Kobo
   tags_raw:
   - Genres
