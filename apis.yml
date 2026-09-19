@@ -134,6 +134,10 @@ apis:
   humanURL: https://webservice.rakuten.co.jp/documentation/ichiba-item-ranking
   baseURL: https://app.rakuten.co.jp
   tags:
+  - Rankings
+  - Bestsellers
+  - Ichiba
+  tags_raw:
   - Ranking
   - Bestsellers
   - Ichiba
@@ -444,6 +448,10 @@ apis:
   tags:
   - Travel
   - Hotels
+  - Rankings
+  tags_raw:
+  - Travel
+  - Hotels
   - Ranking
   properties:
   - type: Documentation
@@ -474,6 +482,10 @@ apis:
   humanURL: https://webservice.rakuten.co.jp/documentation/recipe-category-ranking
   baseURL: https://app.rakuten.co.jp
   tags:
+  - Recipes
+  - Rankings
+  - Food
+  tags_raw:
   - Recipes
   - Ranking
   - Food
@@ -543,6 +555,11 @@ apis:
   - Payments
   - QR
   - Japan
+  - Merchants
+  tags_raw:
+  - Payments
+  - QR
+  - Japan
   - Merchant
   properties:
   - type: ProductPage
@@ -562,7 +579,7 @@ apis:
   humanURL: https://webservice.rms.rakuten.co.jp/
   baseURL: https://api.rms.rakuten.co.jp
   tags:
-  - Merchant
+  - Merchants
   - Ichiba
   - Order
   - Inventory
