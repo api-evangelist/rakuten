@@ -1,9 +1,7 @@
 {
   "provider": "rakuten",
   "sources": [
-    "rakuten-ichibagt-api-openapi.yml",
-    "rakuten-ichibams-api-openapi.yml",
-    "rakuten-ichibaranking-api-openapi.yml"
+    "_original/rakuten-openapi.yml"
   ],
   "outputs": [
     "rakuten-ichibagt-api-openapi.yml",
@@ -13,6 +11,20 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "rakuten-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "rakuten-openapi.yml: tagged paths GET /ichibams/api/IchibaItem/Search/20260401 -> Ichibams",
+    "rakuten-openapi.yml: tagged paths GET /ichibagt/api/IchibaGenre/Search/20260401 -> Ichibagt",
+    "rakuten-openapi.yml: tagged paths GET /ichibaranking/api/IchibaItem/Ranking/20220601 -> Ichibaranking",
+    "rakuten-openapi.yml: declared missing tag: Ichibagt",
+    "rakuten-openapi.yml: declared missing tag: Ichibams",
+    "rakuten-openapi.yml: declared missing tag: Ichibaranking",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "rakuten-ichibagt-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "rakuten-ichibams-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "rakuten-ichibaranking-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

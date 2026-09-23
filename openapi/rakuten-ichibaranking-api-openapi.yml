@@ -1,13 +1,11 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Rakuten Web Services Ichibagt Ichibaranking API
+  title: Rakuten Web Services Ichibaranking API
   description: 'Public Rakuten Web Services (RWS) REST/JSON APIs for searching the Rakuten
 
     Ichiba marketplace (item search, genre search, item ranking). All endpoints
 
-    require a Rakuten application ID and access key.
-
-    '
+    require a Rakuten application ID and access key.'
   version: '20260401'
   contact:
     name: Rakuten Web Services
@@ -93,6 +91,17 @@ paths:
       - Ichibaranking
 components:
   schemas:
+    IchibaItemRankingResponse:
+      type: object
+      properties:
+        title:
+          type: string
+        lastBuildDate:
+          type: string
+        Items:
+          type: array
+          items:
+            $ref: '#/components/schemas/RankedItem'
     RankedItem:
       type: object
       properties:
@@ -128,30 +137,19 @@ components:
           type: integer
         creditCardFlag:
           type: integer
-    IchibaItemRankingResponse:
-      type: object
-      properties:
-        title:
-          type: string
-        lastBuildDate:
-          type: string
-        Items:
-          type: array
-          items:
-            $ref: '#/components/schemas/RankedItem'
   parameters:
-    accessKey:
-      name: accessKey
-      in: query
-      required: true
-      description: Rakuten access key (may be sent as a header instead).
-      schema:
-        type: string
     applicationId:
       name: applicationId
       in: query
       required: true
       description: Rakuten application ID.
+      schema:
+        type: string
+    accessKey:
+      name: accessKey
+      in: query
+      required: true
+      description: Rakuten access key (may be sent as a header instead).
       schema:
         type: string
   securitySchemes:
