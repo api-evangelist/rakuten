@@ -91,17 +91,6 @@ paths:
       - Ichibaranking
 components:
   schemas:
-    IchibaItemRankingResponse:
-      type: object
-      properties:
-        title:
-          type: string
-        lastBuildDate:
-          type: string
-        Items:
-          type: array
-          items:
-            $ref: '#/components/schemas/RankedItem'
     RankedItem:
       type: object
       properties:
@@ -137,19 +126,30 @@ components:
           type: integer
         creditCardFlag:
           type: integer
+    IchibaItemRankingResponse:
+      type: object
+      properties:
+        title:
+          type: string
+        lastBuildDate:
+          type: string
+        Items:
+          type: array
+          items:
+            $ref: '#/components/schemas/RankedItem'
   parameters:
-    applicationId:
-      name: applicationId
-      in: query
-      required: true
-      description: Rakuten application ID.
-      schema:
-        type: string
     accessKey:
       name: accessKey
       in: query
       required: true
       description: Rakuten access key (may be sent as a header instead).
+      schema:
+        type: string
+    applicationId:
+      name: applicationId
+      in: query
+      required: true
+      description: Rakuten application ID.
       schema:
         type: string
   securitySchemes:

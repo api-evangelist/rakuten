@@ -170,18 +170,18 @@ components:
           items:
             $ref: '#/components/schemas/IchibaItem'
   parameters:
-    applicationId:
-      name: applicationId
-      in: query
-      required: true
-      description: Rakuten application ID.
-      schema:
-        type: string
     accessKey:
       name: accessKey
       in: query
       required: true
       description: Rakuten access key (may be sent as a header instead).
+      schema:
+        type: string
+    applicationId:
+      name: applicationId
+      in: query
+      required: true
+      description: Rakuten application ID.
       schema:
         type: string
   securitySchemes:
