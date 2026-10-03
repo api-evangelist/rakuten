@@ -75,6 +75,21 @@ paths:
       tags:
       - Ichibagt
 components:
+  parameters:
+    applicationId:
+      name: applicationId
+      in: query
+      required: true
+      description: Rakuten application ID.
+      schema:
+        type: string
+    accessKey:
+      name: accessKey
+      in: query
+      required: true
+      description: Rakuten access key (may be sent as a header instead).
+      schema:
+        type: string
   schemas:
     IchibaGenreSearchResponse:
       type: object
@@ -103,21 +118,6 @@ components:
           type: string
         genreLevel:
           type: integer
-  parameters:
-    accessKey:
-      name: accessKey
-      in: query
-      required: true
-      description: Rakuten access key (may be sent as a header instead).
-      schema:
-        type: string
-    applicationId:
-      name: applicationId
-      in: query
-      required: true
-      description: Rakuten application ID.
-      schema:
-        type: string
   securitySchemes:
     applicationId:
       type: apiKey

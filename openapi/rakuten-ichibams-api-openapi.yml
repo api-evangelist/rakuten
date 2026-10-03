@@ -118,6 +118,21 @@ paths:
       tags:
       - Ichibams
 components:
+  parameters:
+    applicationId:
+      name: applicationId
+      in: query
+      required: true
+      description: Rakuten application ID.
+      schema:
+        type: string
+    accessKey:
+      name: accessKey
+      in: query
+      required: true
+      description: Rakuten access key (may be sent as a header instead).
+      schema:
+        type: string
   schemas:
     IchibaItem:
       type: object
@@ -169,21 +184,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/IchibaItem'
-  parameters:
-    accessKey:
-      name: accessKey
-      in: query
-      required: true
-      description: Rakuten access key (may be sent as a header instead).
-      schema:
-        type: string
-    applicationId:
-      name: applicationId
-      in: query
-      required: true
-      description: Rakuten application ID.
-      schema:
-        type: string
   securitySchemes:
     applicationId:
       type: apiKey
