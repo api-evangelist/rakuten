@@ -119,13 +119,6 @@ paths:
       - Ichibams
 components:
   parameters:
-    applicationId:
-      name: applicationId
-      in: query
-      required: true
-      description: Rakuten application ID.
-      schema:
-        type: string
     accessKey:
       name: accessKey
       in: query
@@ -133,7 +126,33 @@ components:
       description: Rakuten access key (may be sent as a header instead).
       schema:
         type: string
+    applicationId:
+      name: applicationId
+      in: query
+      required: true
+      description: Rakuten application ID.
+      schema:
+        type: string
   schemas:
+    IchibaItemSearchResponse:
+      type: object
+      properties:
+        count:
+          type: integer
+        page:
+          type: integer
+        first:
+          type: integer
+        last:
+          type: integer
+        hits:
+          type: integer
+        pageCount:
+          type: integer
+        Items:
+          type: array
+          items:
+            $ref: '#/components/schemas/IchibaItem'
     IchibaItem:
       type: object
       properties:
@@ -165,25 +184,6 @@ components:
           type: array
           items:
             type: string
-    IchibaItemSearchResponse:
-      type: object
-      properties:
-        count:
-          type: integer
-        page:
-          type: integer
-        first:
-          type: integer
-        last:
-          type: integer
-        hits:
-          type: integer
-        pageCount:
-          type: integer
-        Items:
-          type: array
-          items:
-            $ref: '#/components/schemas/IchibaItem'
   securitySchemes:
     applicationId:
       type: apiKey
