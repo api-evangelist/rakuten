@@ -664,6 +664,12 @@ authentication:
   - type: AccessToken
     description: RMS endpoints require a per-shop service-secret access token issued through the Ichiba RMS portal.
 common:
+  - type: Plans
+    url: plans/rakuten-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/rakuten-rate-limits.yml
+  - type: FinOps
+    url: finops/rakuten-finops.yml
   - type: AgenticAccess
     url: agentic-access/rakuten-agentic-access.yml
   - type: DomainSecurity
