@@ -1,5 +1,5 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/rakuten/integrations
 - https://n8n.io/integrations/rakuten/
@@ -7,10 +7,33 @@ source:
 - https://monid.ai/tools/rakuten
 checked:
 - https://composio.dev/toolkits/rakuten
+- https://hightouch.com/docs/destinations/rakuten
 - https://monid.ai/tools/rakuten
 - https://n8n.io/integrations/rakuten/
 - https://zapier.com/apps/rakuten/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Hightouch
+  partner: hightouch
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://hightouch.com/docs/destinations/rakuten
+  coverage_role:
+  - destination
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - rakuten
+      status: released
+      sync_types:
+      - Events
+      sync_modes:
+      - insert
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
 templates: []
