@@ -1,4 +1,4 @@
-# Rakuten (rakuten)
+# Rakuten
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,684 +64,150 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Rakuten Group is a Japan-headquartered internet conglomerate
-spanning e-commerce (Rakuten Ichiba), fintech (Rakuten Bank,
-Rakuten Card, Rakuten Securities), digital content (Rakuten
-Books, Kobo, Viki), travel (Rakuten Travel), telecom (Rakuten
-Mobile, Rakuten Symphony), and advertising (Rakuten Advertising).
-Rakuten exposes a long-standing public developer platform —
-Rakuten Web Services (webservice.rakuten.co.jp) — that offers
-REST/JSON APIs for searching Ichiba items and genres, books,
-CDs, DVDs, games, software, magazines, Kobo eBooks, Rakuten
-Travel hotels (simple, detail, vacant, keyword), Rakuten Recipe,
-and Rakuten GORA golf courses. All RWS APIs use a Rakuten
-application ID for authentication and are read-only. Rakuten
-separately operates merchant-facing RMS (Rakuten Merchant Server)
-APIs and Rakuten Pay merchant APIs, which are partner-gated.
+Rakuten Group is a Japan-headquartered internet conglomerate spanning e-commerce (Rakuten Ichiba), fintech (Rakuten Bank, Rakuten Card, Rakuten Securities), digital content (Rakuten Books, Kobo, Viki), travel (Rakuten Travel), telecom (Rakuten Mobile, Rakuten Symphony), and advertising (Rakuten Advertising). Rakuten exposes a long-standing public developer platform — Rakuten Web Services (webservice.rakuten.co.jp) — that offers REST/JSON APIs for searching Ichiba items and genres, books, CDs, DVDs, games, software, magazines, Kobo eBooks, Rakuten Travel hotels (simple, detail, vacant, keyword), Rakuten Recipe, and Rakuten GORA golf courses. All RWS APIs use a Rakuten application ID for authentication and are read-only. Rakuten separately operates merchant-facing RMS (Rakuten Merchant Server) APIs and Rakuten Pay merchant APIs, which are partner-gated.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/rakuten/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/rakuten/refs/heads/main/apis.yml)
+**Areas:** E-Commerce · Travel · Books · Recipes · Golf · Japan · Fintech · Telecommunications · Rakuten Web Services
 
-## Scope
+## Rakuten on APIs.io
 
-- **Type:** Index
-- **Position:** Provider
-- **Access:** Public
+Everything profiled for Rakuten is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/rakuten/](https://apis.io/providers/rakuten/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (33)
 
-- E-commerce
-- Travel
-- Books
-- Recipes
-- Golf
-- Japan
-- Fintech
-- Telecom
-- Rakuten Web Services
+- [Rakuten Ichiba Item Search API](https://apis.io/apis/rakuten/ichiba-item-search/) — Keyword and parameter search across all Rakuten Ichiba marketplace items, returning item titles, prices, images, shop information, and ranking signals.
+- [Rakuten Ichiba Genre Search API](https://apis.io/apis/rakuten/ichiba-genre-search/) — Returns the hierarchical genre tree used to categorize items across Rakuten Ichiba, enabling category navigation and browse-based product discovery.
+- [Rakuten Ichiba Tag Search API](https://apis.io/apis/rakuten/ichiba-tag-search/) — Returns tags associated with a genre, supporting faceted navigation and refinement of Ichiba item browse.
+- [Rakuten Ichiba Ranking API](https://apis.io/apis/rakuten/ichiba-item-ranking/) — Returns top-ranked items across Rakuten Ichiba by genre, age, and gender, used for trend and bestseller displays.
+- [Rakuten Item Price Navi API](https://apis.io/apis/rakuten/ichiba-product-search/) — Price Navi (Product Search) returns aggregated product records with multi-shop price comparisons, ratings, and review metadata for Ichiba.
+- [Rakuten Books Total Search API](https://apis.io/apis/rakuten/books-total-search/) — Unified search across all Rakuten Books catalogs (books, CDs, DVDs, games, software, magazines), returning normalized product records and Rakuten Books shop…
+- [Rakuten Books Book Search API](https://apis.io/apis/rakuten/books-book-search/) — Search Rakuten Books for Japanese-language and translated books by title, author, ISBN, publisher, and other metadata.
+- [Rakuten Books CD Search API](https://apis.io/apis/rakuten/books-cd-search/) — Search Rakuten Books CD catalog by title, artist, label, and release date.
+- [Rakuten Books DVD / Blu-ray Search API](https://apis.io/apis/rakuten/books-dvd-search/) — Search Rakuten Books DVD and Blu-ray catalog including movies, TV, anime, and live performances.
+- [Rakuten Books Foreign Book Search API](https://apis.io/apis/rakuten/books-foreign-search/) — Search Rakuten Books foreign-language books catalog (mostly English-language).
+- [Rakuten Books Magazine Search API](https://apis.io/apis/rakuten/books-magazine-search/) — Search Rakuten Books magazine catalog by title, publisher, and issue date.
+- [Rakuten Books Game Search API](https://apis.io/apis/rakuten/books-game-search/) — Search Rakuten Books video game catalog across major consoles and platforms.
+- [Rakuten Books Software Search API](https://apis.io/apis/rakuten/books-software-search/) — Search Rakuten Books PC software catalog.
+- [Rakuten Books Genre Search API](https://apis.io/apis/rakuten/books-genre-search/) — Returns the genre tree for Rakuten Books, used for browse and navigation across the unified Books catalog.
+- [Rakuten Kobo eBook Search API](https://apis.io/apis/rakuten/kobo-ebook-search/) — Search Rakuten Kobo's eBook catalog for digital reading content across Japanese and international titles.
+- [Rakuten Kobo Genre Search API](https://apis.io/apis/rakuten/kobo-genre-search/) — Returns the Kobo eBook genre hierarchy for browse and filter.
+- [Rakuten Travel Simple Hotel Search API](https://apis.io/apis/rakuten/travel-simple-hotel-search/) — Lightweight keyword and area search over Rakuten Travel's Japanese hotel inventory, returning hotel name, location, and basic descriptors.
+- [Rakuten Travel Hotel Detail Search API](https://apis.io/apis/rakuten/travel-hotel-detail-search/) — Returns full hotel detail records including amenities, addresses, images, and access information for one or more Rakuten Travel hotels by hotel number.
+- [Rakuten Travel Vacant Hotel Search API](https://apis.io/apis/rakuten/travel-vacant-hotel-search/) — Searches for hotels with vacancy for given check-in and check-out dates, party composition, and budget filters.
+- [Rakuten Travel Area Class API](https://apis.io/apis/rakuten/travel-get-area-class/) — Returns Rakuten Travel's hierarchical Japanese area classification (prefecture / region / detail), used to scope hotel searches and build location filters.
+- [Rakuten Travel Keyword Hotel Search API](https://apis.io/apis/rakuten/travel-keyword-hotel-search/) — Full-text keyword search across Rakuten Travel hotel inventory, with filters for area, price, and rating.
+- [Rakuten Travel Hotel Chain List API](https://apis.io/apis/rakuten/travel-hotel-chain-list/) — Returns the list of hotel chains available on Rakuten Travel, used to scope searches to a specific brand.
+- [Rakuten Travel Hotel Ranking API](https://apis.io/apis/rakuten/travel-hotel-ranking/) — Returns top-ranked Rakuten Travel hotels by area and category for trend, bestseller, and recommendation displays.
+- [Rakuten Recipe Category List API](https://apis.io/apis/rakuten/recipe-category-list/) — Returns the Rakuten Recipe category hierarchy (large, medium, small) used for browse navigation of user-submitted Japanese recipes.
+- [Rakuten Recipe Category Ranking API](https://apis.io/apis/rakuten/recipe-category-ranking/) — Returns top-ranked recipes within a Rakuten Recipe category, with images, ingredients, and recipe URLs.
+- [Rakuten GORA Golf Course Search API](https://apis.io/apis/rakuten/gora-golf-course-search/) — Search Rakuten GORA Japanese golf courses by name, area, and facility attributes.
+- [Rakuten GORA Golf Course Detail API](https://apis.io/apis/rakuten/gora-golf-course-detail/) — Returns full golf course detail records on Rakuten GORA including holes, yardage, fees, access, and amenities.
+- [Rakuten GORA Golf Plan Search API](https://apis.io/apis/rakuten/gora-plan-search/) — Search Rakuten GORA tee-time plans by course, date, party size, and budget — used to surface bookable golf rounds.
+- [Rakuten Pay Merchant API](https://apis.io/apis/rakuten/rakuten-pay/) — Rakuten Pay is Rakuten's e-money / QR payment service for Japan, integrated by merchants directly or via PSPs. The merchant API handles order creation,…
+- [Rakuten RMS (Merchant Server) API](https://apis.io/apis/rakuten/rms/) — RMS (Rakuten Merchant Server) is the operational API for Rakuten Ichiba sellers, covering item management, order management, shipping, inventory, and…
+- [Rakuten Ichibagt API](https://apis.io/apis/rakuten/rakuten-ichibagt-api/) — The Ichibagt API from Rakuten — 1 operation(s) for ichibagt.
+- [Rakuten Ichibams API](https://apis.io/apis/rakuten/rakuten-ichibams-api/) — The Ichibams API from Rakuten — 1 operation(s) for ichibams.
+- [Rakuten Ichibaranking API](https://apis.io/apis/rakuten/rakuten-ichibaranking-api/) — The Ichibaranking API from Rakuten — 1 operation(s) for ichibaranking.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Rakuten Ichiba Item Search API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Keyword and parameter search across all Rakuten Ichiba
-marketplace items, returning item titles, prices, images,
-shop information, and ranking signals.
+- [Rakuten Agentic Access](https://apis.io/agentic-access/rakuten/rakuten-agentic-access/)
 
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/ichiba-item-search](https://webservice.rakuten.co.jp/documentation/ichiba-item-search)
-- **Base URL:** `https://app.rakuten.co.jp`
+#### Collections (4)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- E-commerce
-- Items
-- Search
-- Ichiba
+- [Rakuten Web Services API](https://apis.io/collections/rakuten/open-rakuten/)
+- [Rakuten Web Services Ichibagt API](https://apis.io/collections/rakuten/open-rakuten-ichibagt-api/)
+- [Rakuten Web Services Ichibagt Ichibams API](https://apis.io/collections/rakuten/open-rakuten-ichibams-api/)
+- [Rakuten Web Services Ichibagt Ichibaranking API](https://apis.io/collections/rakuten/open-rakuten-ichibaranking-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://webservice.rakuten.co.jp/documentation/ichiba-item-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Rakuten Ichiba Genre Search API
+- [Rakuten Authentication](https://apis.io/security/rakuten/rakuten-authentication/)
+- [Rakuten Domain Security](https://apis.io/security/rakuten/rakuten-domain-security/)
 
-Returns the hierarchical genre tree used to categorize items
-across Rakuten Ichiba, enabling category navigation and
-browse-based product discovery.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/ichiba-genre-search](https://webservice.rakuten.co.jp/documentation/ichiba-genre-search)
-- **Base URL:** `https://app.rakuten.co.jp`
+Published plans, tiers and prices.
 
-#### Tags
+- [Rakuten Plans Pricing](https://apis.io/plans/rakuten/rakuten-plans-pricing/)
 
-- Genres
-- Categories
-- Ichiba
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://webservice.rakuten.co.jp/documentation/ichiba-genre-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Rakuten Rate Limits](https://apis.io/rate-limits/rakuten/rakuten-rate-limits/)
 
-### Rakuten Ichiba Tag Search API
+#### FinOps (1)
 
-Returns tags associated with a genre, supporting faceted
-navigation and refinement of Ichiba item browse.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/ichiba-tag-search](https://webservice.rakuten.co.jp/documentation/ichiba-tag-search)
-- **Base URL:** `https://app.rakuten.co.jp`
+- [Rakuten Finops](https://apis.io/finops/rakuten/rakuten-finops/)
 
-#### Tags
+## Where to find this API
 
-- Tags
-- Facets
-- Ichiba
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/ichiba-tag-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Ichiba Ranking API
-
-Returns top-ranked items across Rakuten Ichiba by genre, age,
-and gender, used for trend and bestseller displays.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/ichiba-item-ranking](https://webservice.rakuten.co.jp/documentation/ichiba-item-ranking)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Ranking
-- Bestsellers
-- Ichiba
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/ichiba-item-ranking)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Item Price Navi API
-
-Price Navi (Product Search) returns aggregated product
-records with multi-shop price comparisons, ratings, and
-review metadata for Ichiba.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/ichiba-product-search](https://webservice.rakuten.co.jp/documentation/ichiba-product-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Products
-- Price Comparison
-- Reviews
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/ichiba-product-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Books Total Search API
-
-Unified search across all Rakuten Books catalogs (books, CDs,
-DVDs, games, software, magazines), returning normalized
-product records and Rakuten Books shop information.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/books-total-search](https://webservice.rakuten.co.jp/documentation/books-total-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Books
-- Media
-- Search
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/books-total-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Books Book Search API
-
-Search Rakuten Books for Japanese-language and translated
-books by title, author, ISBN, publisher, and other metadata.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/books-book-search](https://webservice.rakuten.co.jp/documentation/books-book-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Books
-- Search
-- ISBN
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/books-book-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Books CD Search API
-
-Search Rakuten Books CD catalog by title, artist, label, and
-release date.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/books-cd-search](https://webservice.rakuten.co.jp/documentation/books-cd-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Music
-- CDs
-- Search
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/books-cd-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Books DVD / Blu-ray Search API
-
-Search Rakuten Books DVD and Blu-ray catalog including
-movies, TV, anime, and live performances.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/books-dvd-search](https://webservice.rakuten.co.jp/documentation/books-dvd-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Video
-- DVD
-- Blu-ray
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/books-dvd-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Books Foreign Book Search API
-
-Search Rakuten Books foreign-language books catalog (mostly
-English-language).
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/books-foreign-search](https://webservice.rakuten.co.jp/documentation/books-foreign-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Books
-- Foreign
-- Search
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/books-foreign-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Books Magazine Search API
-
-Search Rakuten Books magazine catalog by title, publisher,
-and issue date.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/books-magazine-search](https://webservice.rakuten.co.jp/documentation/books-magazine-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Magazines
-- Search
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/books-magazine-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Books Game Search API
-
-Search Rakuten Books video game catalog across major consoles
-and platforms.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/books-game-search](https://webservice.rakuten.co.jp/documentation/books-game-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Games
-- Consoles
-- Search
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/books-game-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Books Software Search API
-
-Search Rakuten Books PC software catalog.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/books-software-search](https://webservice.rakuten.co.jp/documentation/books-software-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Software
-- PC
-- Search
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/books-software-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Books Genre Search API
-
-Returns the genre tree for Rakuten Books, used for browse and
-navigation across the unified Books catalog.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/books-genre-search](https://webservice.rakuten.co.jp/documentation/books-genre-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Genres
-- Categories
-- Books
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/books-genre-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Kobo eBook Search API
-
-Search Rakuten Kobo's eBook catalog for digital reading
-content across Japanese and international titles.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/kobo-ebook-search](https://webservice.rakuten.co.jp/documentation/kobo-ebook-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- eBooks
-- Kobo
-- Search
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/kobo-ebook-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Kobo Genre Search API
-
-Returns the Kobo eBook genre hierarchy for browse and filter.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/kobo-genre-search](https://webservice.rakuten.co.jp/documentation/kobo-genre-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Genres
-- eBooks
-- Kobo
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/kobo-genre-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Travel Simple Hotel Search API
-
-Lightweight keyword and area search over Rakuten Travel's
-Japanese hotel inventory, returning hotel name, location,
-and basic descriptors.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/simple-hotel-search](https://webservice.rakuten.co.jp/documentation/simple-hotel-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Travel
-- Hotels
-- Search
-- Japan
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/simple-hotel-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Travel Hotel Detail Search API
-
-Returns full hotel detail records including amenities,
-addresses, images, and access information for one or more
-Rakuten Travel hotels by hotel number.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/hotel-detail-search](https://webservice.rakuten.co.jp/documentation/hotel-detail-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Travel
-- Hotels
-- Details
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/hotel-detail-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Travel Vacant Hotel Search API
-
-Searches for hotels with vacancy for given check-in and
-check-out dates, party composition, and budget filters.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/vacant-hotel-search](https://webservice.rakuten.co.jp/documentation/vacant-hotel-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Travel
-- Hotels
-- Availability
-- Booking
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/vacant-hotel-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Travel Area Class API
-
-Returns Rakuten Travel's hierarchical Japanese area
-classification (prefecture / region / detail), used to scope
-hotel searches and build location filters.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/get-area-class](https://webservice.rakuten.co.jp/documentation/get-area-class)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Travel
-- Areas
-- Japan
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/get-area-class)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Travel Keyword Hotel Search API
-
-Full-text keyword search across Rakuten Travel hotel
-inventory, with filters for area, price, and rating.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/keyword-hotel-search](https://webservice.rakuten.co.jp/documentation/keyword-hotel-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Travel
-- Hotels
-- Keyword
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/keyword-hotel-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Travel Hotel Chain List API
-
-Returns the list of hotel chains available on Rakuten Travel,
-used to scope searches to a specific brand.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/get-hotel-chain-list](https://webservice.rakuten.co.jp/documentation/get-hotel-chain-list)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Travel
-- Chains
-- Brands
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/get-hotel-chain-list)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Travel Hotel Ranking API
-
-Returns top-ranked Rakuten Travel hotels by area and category
-for trend, bestseller, and recommendation displays.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/hotel-ranking](https://webservice.rakuten.co.jp/documentation/hotel-ranking)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Travel
-- Hotels
-- Ranking
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/hotel-ranking)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Recipe Category List API
-
-Returns the Rakuten Recipe category hierarchy (large, medium,
-small) used for browse navigation of user-submitted Japanese
-recipes.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/recipe-category-list](https://webservice.rakuten.co.jp/documentation/recipe-category-list)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Recipes
-- Categories
-- Food
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/recipe-category-list)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Recipe Category Ranking API
-
-Returns top-ranked recipes within a Rakuten Recipe category,
-with images, ingredients, and recipe URLs.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/recipe-category-ranking](https://webservice.rakuten.co.jp/documentation/recipe-category-ranking)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Recipes
-- Ranking
-- Food
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/recipe-category-ranking)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten GORA Golf Course Search API
-
-Search Rakuten GORA Japanese golf courses by name, area, and
-facility attributes.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/gora-golf-course-search](https://webservice.rakuten.co.jp/documentation/gora-golf-course-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Golf
-- GORA
-- Japan
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/gora-golf-course-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten GORA Golf Course Detail API
-
-Returns full golf course detail records on Rakuten GORA
-including holes, yardage, fees, access, and amenities.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/gora-golf-course-detail](https://webservice.rakuten.co.jp/documentation/gora-golf-course-detail)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Golf
-- GORA
-- Course Details
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/gora-golf-course-detail)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten GORA Golf Plan Search API
-
-Search Rakuten GORA tee-time plans by course, date, party
-size, and budget — used to surface bookable golf rounds.
-
-- **Human URL:** [https://webservice.rakuten.co.jp/documentation/gora-plan-search](https://webservice.rakuten.co.jp/documentation/gora-plan-search)
-- **Base URL:** `https://app.rakuten.co.jp`
-
-#### Tags
-
-- Golf
-- GORA
-- Tee Times
-
-#### Properties
-
-- [Documentation](https://webservice.rakuten.co.jp/documentation/gora-plan-search)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten Pay Merchant API
-
-Rakuten Pay is Rakuten's e-money / QR payment service for
-Japan, integrated by merchants directly or via PSPs. The
-merchant API handles order creation, payment authorization,
-capture, refunds, and reconciliation for in-store QR and
-online checkout flows.
-
-- **Human URL:** [https://pay.rakuten.co.jp/business/](https://pay.rakuten.co.jp/business/)
-- **Base URL:** `https://api.rakuten.co.jp`
-
-#### Tags
-
-- Payments
-- QR
-- Japan
-- Merchant
-
-#### Properties
-
-- [Product Page](https://pay.rakuten.co.jp/business/)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Rakuten RMS (Merchant Server) API
-
-RMS (Rakuten Merchant Server) is the operational API for
-Rakuten Ichiba sellers, covering item management, order
-management, shipping, inventory, and customer messaging.
-Access is restricted to approved Ichiba shop owners and
-partner ERP / OMS vendors.
-
-- **Human URL:** [https://webservice.rms.rakuten.co.jp/](https://webservice.rms.rakuten.co.jp/)
-- **Base URL:** `https://api.rms.rakuten.co.jp`
-
-#### Tags
-
-- Merchant
-- Ichiba
-- Orders
-- Inventory
-- ERP
-
-#### Properties
-
-- [Product Page](https://webservice.rms.rakuten.co.jp/)
-- [Postman Collection](collections/rakuten.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/rakuten.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [Corporate Website](https://global.rakuten.com/corp/)
-- [Consumer Website](https://www.rakuten.co.jp/)
-- [Developer Portal](https://webservice.rakuten.co.jp/)
+- [Website](https://global.rakuten.com/corp/)
 - [Documentation](https://webservice.rakuten.co.jp/documentation)
-- [A P I List](https://webservice.rakuten.co.jp/documentation)
-- [Sign Up](https://webservice.rakuten.co.jp/app/create)
-- [R M S](https://webservice.rms.rakuten.co.jp/)
-- [Rakuten Pay](https://pay.rakuten.co.jp/business/)
-- [Investor Relations](https://global.rakuten.com/corp/investors/)
-- [News](https://global.rakuten.com/corp/news/)
-- [Sustainability](https://global.rakuten.com/corp/sustainability/)
-- [Careers](https://global.rakuten.com/corp/careers/)
-- [Git Hub](https://github.com/rakutentech)
-- [Tech Blog](https://engineering.rakuten.today/)
-- [LinkedIn](https://www.linkedin.com/company/rakuten/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 28.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 67.0 |
+| Contract quality | 47.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 31.0 |
+| Access clarity | 18.4 |
+
+**Agent readiness 20.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.0** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/rakuten/](https://apis.io/providers/rakuten/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Rakuten: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/rakuten/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
